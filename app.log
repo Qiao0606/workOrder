@@ -1,37 +1,3 @@
-[INFO] Scanning for projects...
-[INFO] 
-[INFO] -----------------------< com.example:SpringDemo >-----------------------
-[INFO] Building SpringDemo 0.0.1-SNAPSHOT
-[INFO]   from pom.xml
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] >>> spring-boot:2.7.18:run (default-cli) > test-compile @ SpringDemo >>>
-[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
-[INFO] 
-[INFO] --- resources:3.2.0:resources (default-resources) @ SpringDemo ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Using 'UTF-8' encoding to copy filtered properties files.
-[INFO] Copying 9 resources
-[INFO] Copying 0 resource
-[INFO] 
-[INFO] --- compiler:3.8.1:compile (default-compile) @ SpringDemo ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 28 source files to D:\Learn\SpringDemo\target\classes
-[INFO] 
-[INFO] --- resources:3.2.0:testResources (default-testResources) @ SpringDemo ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Using 'UTF-8' encoding to copy filtered properties files.
-[INFO] skip non existing resourceDirectory D:\Learn\SpringDemo\src\test\resources
-[INFO] 
-[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ SpringDemo ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to D:\Learn\SpringDemo\target\test-classes
-[INFO] 
-[INFO] <<< spring-boot:2.7.18:run (default-cli) < test-compile @ SpringDemo <<<
-[INFO] 
-[INFO] 
-[INFO] --- spring-boot:2.7.18:run (default-cli) @ SpringDemo ---
-[INFO] Attaching agents: []
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -41,117 +7,139 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.18)
 
-2026-03-28 17:08:12.005  INFO 912 --- [           main] c.e.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_131 on ´úÂëÉ±ÊÖ with PID 912 (D:\Learn\SpringDemo\target\classes started by 86131 in D:\Learn\SpringDemo)
-2026-03-28 17:08:12.009  INFO 912 --- [           main] c.e.springdemo.SpringDemoApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-03-28 17:08:14.319  INFO 912 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2026-03-28 17:08:14.333  INFO 912 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-28 17:08:14.333  INFO 912 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-2026-03-28 17:08:14.482  INFO 912 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-28 17:08:14.487  INFO 912 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2408 ms
+2026-04-27 18:32:40.468  INFO 37459 --- [           main] c.e.springdemo.SpringDemoApplication     : Starting SpringDemoApplication v0.0.1-SNAPSHOT using Java 17.0.17 on U-GGK170XJ-2133.local with PID 37459 (/Users/sky/Downloads/ZIP/SpringDemo/target/SpringDemo-0.0.1-SNAPSHOT.jar started by sky in /Users/sky/Downloads/ZIP/SpringDemo)
+2026-04-27 18:32:40.469  INFO 37459 --- [           main] c.e.springdemo.SpringDemoApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-04-27 18:32:40.974  INFO 37459 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-04-27 18:32:40.979  INFO 37459 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-27 18:32:40.979  INFO 37459 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-04-27 18:32:41.015  INFO 37459 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-27 18:32:41.015  INFO 37459 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 527 ms
 Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
-Parsed mapper file: 'file [D:\Learn\SpringDemo\target\classes\mapper\BizWorkOrderMapper.xml]'
-Parsed mapper file: 'file [D:\Learn\SpringDemo\target\classes\mapper\RuleKeywordMapper.xml]'
-Parsed mapper file: 'file [D:\Learn\SpringDemo\target\classes\mapper\SysCategoryMapper.xml]'
-Parsed mapper file: 'file [D:\Learn\SpringDemo\target\classes\mapper\UserMapper.xml]'
-2026-03-28 17:08:14.932  INFO 912 --- [           main] c.e.s.s.impl.ClassificationServiceImpl   : Loading classification rules...
+Parsed mapper file: 'class path resource [mapper/BizWorkOrderMapper.xml]'
+Parsed mapper file: 'class path resource [mapper/SysCategoryMapper.xml]'
+Parsed mapper file: 'class path resource [mapper/UserMapper.xml]'
+Parsed mapper file: 'class path resource [mapper/RuleKeywordMapper.xml]'
+2026-04-27 18:32:41.177  INFO 37459 --- [           main] c.e.s.s.impl.ClassificationServiceImpl   : Loading classification rules...
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35178483] was not registered for synchronization because synchronization is not active
-2026-03-28 17:08:14.952  INFO 912 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-28 17:08:14.952  WARN 912 --- [           main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2026-03-28 17:08:15.196  INFO 912 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-JDBC Connection [HikariProxyConnection@2011912080 wrapping com.mysql.cj.jdbc.ConnectionImpl@68e7c8c3] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b057c8c] was not registered for synchronization because synchronization is not active
+2026-04-27 18:32:41.185  INFO 37459 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-27 18:32:41.186  WARN 37459 --- [           main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2026-04-27 18:32:41.259  INFO 37459 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@583559449 wrapping com.mysql.cj.jdbc.ConnectionImpl@70fab835] will not be managed by Spring
 ==>  Preparing: SELECT category_id, parent_id, category_name, category_code, sort, status, remark, create_time, update_time FROM sys_category WHERE status = 1 ORDER BY sort ASC, category_id ASC
 ==> Parameters: 
 <==    Columns: category_id, parent_id, category_name, category_code, sort, status, remark, create_time, update_time
-<==        Row: 1, 0, ³ÇÊÐ¹ÜÀí, CSGL, 1, 1, °üº¬ÊÐÈÝ»·¾³¡¢ÊÐÕþÉèÊ©¡¢Î¥½¨ÖÎÀíµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 11, 1, ÊÐÈÝ»·¾³, CSGL-001, 1, 1, °üº¬À¬»øÇåÔË¡¢¹²Ïíµ¥³µ¡¢À¬»ø·ÖÀàµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 14, 2, ´óÆøÎÛÈ¾, SHHJ-001, 1, 1, °üº¬ÓÍÑÌ¡¢Ñï³¾¡¢·ÏÆøÅÅ·ÅµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 17, 3, Éç±£½É·Ñ, SBJ-001, 1, 1, °üº¬Éç±£»ùÊý¡¢½É·Ñ²éÑ¯¡¢²¹½ÉµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 20, 4, µçÌÝ°²È«, JGJJ-001, 1, 1, °üº¬µçÌÝ¹ÊÕÏ¡¢Äê¼ì¡¢Î¬±£µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 23, 5, ÒåÎñ½ÌÓý, JYJ-001, 1, 1, °üº¬Ñ§Çø»®·Ö¡¢ÈëÑ§±¨Ãû¡¢¿ÎÒµ¸ºµ£µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 26, 6, Ïû·ÑÎ¬È¨, GSGL-001, 1, 1, °üº¬Íø¹º¡¢ÊµÌåµêÏû·Ñ¾À·×µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 29, 7, ¹«¹²½»Í¨, JTGL-001, 1, 1, °üº¬¹«½»¡¢µØÌú¡¢°à³µµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 32, 8, ¾ÍÒ½·þÎñ, YWJY-001, 1, 1, °üº¬¹ÒºÅ¡¢¾ÍÒ½Á÷³Ì¡¢Ò½ÁÆ·þÎñµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 35, 9, ¾°Çø¹ÜÀí, LYJ-001, 1, 1, °üº¬¾°ÇøÊÕ·Ñ¡¢ÉèÊ©¡¢·þÎñµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 38, 10, ÎïÒµ¹ÜÀí, FJGL-001, 1, 1, °üº¬ÎïÒµÊÕ·Ñ¡¢·þÎñ¡¢Î¬ÐÞµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 2, 0, ÉúÌ¬»·¾³, SHHJ, 2, 1, °üº¬´óÆøÎÛÈ¾¡¢ÔëÒôÎÛÈ¾¡¢Ë®ÎÛÈ¾µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 12, 1, Î¥½¨ÖÎÀí, CSGL-002, 2, 1, °üº¬Ë½´îÂÒ½¨¡¢Î¥¹æ×°ÐÞµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 15, 2, ÔëÒôÎÛÈ¾, SHHJ-002, 2, 1, °üº¬Ê©¹¤¡¢ÉÌÒµ¡¢Éú»îÔëÒôµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 18, 3, ÑøÀÏ½ð, SBJ-002, 2, 1, °üº¬ÑøÀÏ½ðµ÷Õû¡¢·¢·Å¡¢ÈÏÖ¤µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 21, 4, ¹©Ë®±£ÕÏ, JGJJ-002, 2, 1, °üº¬Í£Ë®¡¢Ë®ÖÊ¡¢Ë®¹ÜÎ¬ÐÞµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 24, 5, Ð£ÍâÅàÑµ, JYJ-002, 2, 1, °üº¬ÅàÑµ»ú¹¹¼à¹Ü¡¢ÍË·Ñ¡¢Ðé¼ÙÐû´«µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 27, 6, Ê³Æ·°²È«, GSGL-002, 2, 1, °üº¬²ÍÒû¡¢ÉÌ³¬Ê³Æ·ÖÊÁ¿µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 30, 7, µÀÂ·¹ÜÀí, JTGL-002, 2, 1, °üº¬µÀÂ·ÆÆËð¡¢¾®¸Ç¡¢Í£³µµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 33, 8, Ò©Æ·¼à¹Ü, YWJY-002, 2, 1, °üº¬Ò©Æ·ÖÊÁ¿¡¢¼Û¸ñ¡¢¹©Ó¦µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 36, 9, ÂÃÓÎÎ¬È¨, LYJ-002, 2, 1, °üº¬ÂÃÐÐÉç¡¢µ¼ÓÎ¡¢Ïû·Ñ¾À·×µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 39, 10, ±£ÕÏÐÔ×¡·¿, FJGL-002, 2, 1, °üº¬¹«×â·¿¡¢¾­ÊÊ·¿¡¢Á®×â·¿µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 3, 0, Éç»á±£ÕÏ, SBJ, 3, 1, °üº¬Éç±£¡¢Ò½±£¡¢ÑøÀÏ½ðµÈÃñÉú±£ÕÏËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 13, 1, Õ¼µÀ¾­Óª, CSGL-003, 3, 1, °üº¬ÉÌÆÌÕ¼µÀ¡¢Á÷¶¯Ì¯··µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 16, 2, Ë®ÎÛÈ¾, SHHJ-003, 3, 1, °üº¬ºÓµÀ¡¢Ð¡ÇøÎÛË®µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 19, 3, Ò½±£±¨Ïú, SBJ-003, 3, 1, °üº¬Ò½±£±¨Ïú¡¢ÒìµØ¾ÍÒ½¡¢Ò©Æ·Ä¿Â¼µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 22, 4, ¹©Å¯±£ÕÏ, JGJJ-003, 3, 1, °üº¬¹©Å¯ÎÂ¶È¡¢Í£Å¯¡¢Î¬ÐÞµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 25, 5, Ñ§Ç°½ÌÓý, JYJ-003, 3, 1, °üº¬Ó×¶ùÔ°ÊÕ·Ñ¡¢ÈëÔ°¡¢Ê¦×ÊµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 28, 6, ¼Û¸ñ¼à¹Ü, GSGL-003, 3, 1, °üº¬ºåÌ§Îï¼Û¡¢ÂÒÊÕ·ÑµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 31, 7, ³ö×â³µ¹ÜÀí, JTGL-003, 3, 1, °üº¬¾ÜÔØ¡¢ÂÒÊÕ·Ñ¡¢ÈÆÂ·µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 34, 8, ¹«¹²ÎÀÉú, YWJY-003, 3, 1, °üº¬ÒßÇé·À¿Ø¡¢Ìå¼ì¡¢ÒßÃçµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 37, 9, ÎÄ»¯·þÎñ, LYJ-003, 3, 1, °üº¬Í¼Êé¹Ý¡¢ÎÄ»¯¹Ý¡¢ÑÝ³öµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 40, 10, ·¿ÎÝÎ¬ÐÞ, FJGL-003, 3, 1, °üº¬·¿ÎÝÂ©Ë®¡¢Ç½Ìå¿ªÁÑµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 4, 0, »ù´¡ÉèÊ©, JGJJ, 4, 1, °üº¬Ë®¡¢µç¡¢Æø¡¢Å¯¡¢µçÌÝµÈ»ù´¡ÉèÊ©ËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 5, 0, ½ÌÓý½ÌÑ§, JYJ, 5, 1, °üº¬Ñ§Ç°½ÌÓý¡¢ÒåÎñ½ÌÓý¡¢ÅàÑµ¼à¹ÜµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 6, 0, ÊÐ³¡¼à¹Ü, GSGL, 6, 1, °üº¬Ïû·ÑÎ¬È¨¡¢ÊÐ³¡ÖÈÐò¡¢ÆóÒµ¼à¹ÜµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 7, 0, ½»Í¨ÔËÊä, JTGL, 7, 1, °üº¬¹«½»¡¢³ö×â¡¢µÀÂ·¡¢Í£³µµÈ½»Í¨ËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 8, 0, Ò½ÁÆÎÀÉú, YWJY, 8, 1, °üº¬¾ÍÒ½¡¢Ò©Æ·¡¢Ò½±£¡¢¹«¹²ÎÀÉúµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 9, 0, ÎÄ»¯ÂÃÓÎ, LYJ, 9, 1, °üº¬¾°Çø¹ÜÀí¡¢ÂÃÓÎÎ¬È¨¡¢ÎÄ»¯·þÎñµÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==        Row: 10, 0, ×¡·¿±£ÕÏ, FJGL, 10, 1, °üº¬¹«×â·¿¡¢ÎïÒµ¡¢¹«»ý½ð¡¢²ðÇ¨µÈËßÇó, 2026-03-22 15:51:27, 2026-03-22 15:51:27
-<==      Total: 40
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35178483]
+<==        Row: 1, 0, åŸŽå¸‚ç®¡ç†, CSGL, 1, 1, åŸŽå¸‚ç®¡ç†ç›¸å…³é—®é¢˜ï¼šé“è·¯ã€è·¯ç¯ã€åžƒåœ¾ç­‰, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 2, 0, ç¤¾ä¼šçŽ¯å¢ƒ, SHHJ, 2, 1, ç¤¾ä¼šçŽ¯å¢ƒç›¸å…³é—®é¢˜ï¼šå™ªéŸ³ã€æ±¡æŸ“ç­‰, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 3, 0, ç¤¾ä¼šä¿éšœ, SBJ, 3, 1, ç¤¾ä¼šä¿éšœç›¸å…³é—®é¢˜ï¼šç¤¾ä¿ã€å…¬ç§¯é‡‘ç­‰, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 4, 0, æœºæž„ç»æµŽ, JGJJ, 4, 1, æœºæž„ç»æµŽç›¸å…³é—®é¢˜ï¼šç¨ŽåŠ¡ã€å·¥å•†ç­‰, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 5, 0, æ•™è‚², JYJ, 5, 1, æ•™è‚²ç›¸å…³é—®é¢˜ï¼šå­¦æ ¡ã€æ‹›ç”Ÿç­‰, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 6, 0, å…¬å¸ç®¡ç†, GSGL, 6, 1, å…¬å¸ç®¡ç†ç›¸å…³é—®é¢˜, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 7, 0, äº¤é€šç®¡ç†, JTGL, 7, 1, äº¤é€šç®¡ç†ç›¸å…³é—®é¢˜ï¼šäº¤é€šä¿¡å·ã€è¿ç« ç­‰, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 8, 0, åŒ»ç–—å«ç”Ÿ, YWJY, 8, 1, åŒ»ç–—å«ç”Ÿç›¸å…³é—®é¢˜, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 9, 0, æž—ä¸š, LYJ, 9, 1, æž—ä¸šç›¸å…³é—®é¢˜, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 10, 0, æˆ¿ä»·ç®¡ç†, FJGL, 10, 1, æˆ¿ä»·ç®¡ç†ç›¸å…³é—®é¢˜, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==      Total: 10
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b057c8c]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79316f3a] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@941453849 wrapping com.mysql.cj.jdbc.ConnectionImpl@68e7c8c3] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67af833b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@220165304 wrapping com.mysql.cj.jdbc.ConnectionImpl@70fab835] will not be managed by Spring
 ==>  Preparing: SELECT rule_id, category_id, keyword, synonym, match_type, weight, hit_count, status, effective_time, expire_time, create_time, update_time FROM rule_keyword WHERE status = 1 AND (effective_time IS NULL OR effective_time <= NOW()) AND (expire_time IS NULL OR expire_time >= NOW()) ORDER BY category_id ASC, weight DESC
 ==> Parameters: 
 <==    Columns: rule_id, category_id, keyword, synonym, match_type, weight, hit_count, status, effective_time, expire_time, create_time, update_time
-<==        Row: 29, 9, ¾°ÇøÃÅÆ±, ÃÅÆ±¼Û¸ñ,À¦°óÏû·Ñ,ÂÒÊÕ·Ñ, 1, 4.0, 19, 1, 2026-03-01 00:00:00, 2026-05-01 00:00:00, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 26, 11, ¾®¸ÇÆÆËð, ¾®¸Ç»µÁË,¾®¸ÇÈ±Ê§,×¹¾®·çÏÕ, 2, 4.9, 23, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 1, 11, À¬»øÇåÔË, À¬»øÇåÀí,À¬»øÔËÊä,À¬»øÊÕÔË, 1, 4.5, 128, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 4, 11, À¬»øÍ°ÂúÒç, À¬»øÍ°ÂúÁË,À¬»ø¶Ñ»ý,À¬»øÍ°Î´ÇåÀí, 1, 4.2, 89, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 2, 11, ¹²Ïíµ¥³µ, ¹²Ïí×ÔÐÐ³µ,µ¥³µÂÒÍ£,¹²Ïíµ¥³µÕ¼µÀ, 1, 4.0, 95, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 3, 11, À¬»ø·ÖÀà, À¬»øÍ¶·Å,³øÓàÀ¬»ø,¿É»ØÊÕÎï, 1, 3.8, 76, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 5, 12, Ë½´îÂÒ½¨, Î¥¹æ´î½¨,¼Ó¸Ç·¿ÎÝ,Î¥½¨, 1, 4.8, 45, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 6, 12, Î¥¹æ×°ÐÞ, ²ð³ÐÖØÇ½,Ë½¸Ä½á¹¹,×°ÐÞÎ¥½¨, 1, 4.3, 32, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 7, 13, Õ¼µÀ¾­Óª, ³öµê¾­Óª,µêÍâ°ÚÌ¯,Á÷¶¯Ì¯··, 1, 4.0, 67, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 8, 13, ÂíÂ·ÊÐ³¡, Õ¼µÀÊÐ³¡,Â·±ß°ÚÌ¯, 1, 3.5, 28, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 9, 14, ÓÍÑÌÅÅ·Å, ²ÍÒûÓÍÑÌ,ÓÍÑÌÈÅÃñ,ÓÍÑÌ³¬±ê, 1, 4.6, 102, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 10, 14, Ñï³¾ÎÛÈ¾, ¹¤µØÑï³¾,ÔüÍÁ³µÑï³¾,·Û³¾, 1, 4.1, 58, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 11, 15, Ê©¹¤ÔëÒô, Ò¹¼äÊ©¹¤,¹¤µØÔëÒô,×°ÐÞÔëÒô, 1, 4.7, 83, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 12, 15, ÉÌÒµÔëÒô, ¾Æ°ÉÔëÒô,¹ã³¡ÎèÔëÒô,ÉÌÆÌÒôÏì, 1, 4.2, 71, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 13, 16, ÎÛË®ÅÅ·Å, ºÓµÀÎÛË®,Ð¡ÇøÎÛË®,¹¤³§ÅÅÎÛ, 1, 4.4, 29, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 14, 16, Ë®ÖÊ»ë×Ç, ×ÔÀ´Ë®»ë×Ç,ÒûÓÃË®ÒìÎ¶, 1, 3.9, 18, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 15, 20, µçÌÝ¹ÊÕÏ, µçÌÝÍ£ÔË,µçÌÝÀ§ÈË,µçÌÝÒìÏì, 1, 5.0, 78, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 16, 20, µçÌÝÄê¼ì, µçÌÝÎ¬±£,µçÌÝ¼ì²â,µçÌÝ°²È«, 1, 4.0, 41, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 17, 21, Í£Ë®, Í£Ë®Í¨Öª,Ð¡ÇøÍ£Ë®,ÎÞË®¿ÉÓÃ, 1, 4.9, 96, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 18, 21, Ë®¹ÜÂ©Ë®, ¹ÜµÀÂ©Ë®,Ë®±íÂ©Ë®,Í£Ë®Î¬ÐÞ, 1, 4.3, 52, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 19, 22, ¹©Å¯²»ÈÈ, ÊÒÎÂµÍ,Å¯Æø²»ÈÈ,¹©Å¯ÎÂ¶È, 1, 4.8, 115, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 20, 22, Í£Å¯, Å¯ÆøÍ£¹©,¹©Å¯ÖÐ¶Ï, 1, 4.5, 63, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 23, 25, ¼Ù»õ, ¼ÙÃ°Î±ÁÓ,·ÂÃ°²úÆ·,¼Ù»õÎ¬È¨, 1, 4.7, 65, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 22, 25, ÍË»õÄÑ, ¾Ü¾øÍË»õ,ÍË¿îÄÑ,ÊÛºóÎÞ±£ÕÏ, 1, 4.4, 92, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 21, 25, Ðé¼ÙÐû´«, ¿ä´óÐû´«,²»ÊµÐû´«,Îóµ¼Ïû·Ñ, 1, 4.2, 87, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 27, 25, ^1[3-9]\d{9}$, ÊÖ»úºÅ,µç»°,ÁªÏµ·½Ê½, 3, 3.0, 15, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 24, 27, ºåÌ§Îï¼Û, ¼Û¸ñÐé¸ß,ÂÒÕÇ¼Û,¸ß¼ÛÊÛÂô, 1, 4.6, 38, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==        Row: 25, 27, ÂÒÊÕ·Ñ, Î¥¹æÊÕ·Ñ,¶àÊÕ·Ñ,ÎÞÒÀ¾ÝÊÕ·Ñ, 1, 4.3, 54, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
-<==      Total: 28
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79316f3a]
-2026-03-28 17:08:15.306  INFO 912 --- [           main] c.e.s.s.impl.ClassificationServiceImpl   : Loaded 40 categories and 28 rules
-2026-03-28 17:08:15.500  INFO 912 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-03-28 17:08:15.750  INFO 912 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2026-03-28 17:08:15.761  INFO 912 --- [           main] c.e.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 4.161 seconds (JVM running for 4.689)
-2026-03-28 17:16:31.011  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m13s592ms189?s200ns).
-2026-03-28 19:15:51.141  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h54m50s72ms293?s800ns).
-2026-03-28 19:30:21.887  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m566ms37?s200ns).
-2026-03-28 21:31:15.766  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m52s207ms960?s100ns).
-2026-03-28 22:00:28.254  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m42s77ms41?s600ns).
-2026-03-28 22:29:14.542  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m46s266ms353?s300ns).
-2026-03-28 23:04:11.473  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m26s663ms811?s600ns).
-2026-03-29 01:30:15.586  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m32s641ms545?s500ns).
-2026-03-29 04:50:43.927  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h17m28s277ms420?s600ns).
+<==        Row: 3, 1, åžƒåœ¾, åžƒåœ¾å †,åžƒåœ¾æ¸…ç†,åžƒåœ¾æ¡¶, 1, 2.5, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 1, 1, é“è·¯, é©¬è·¯,è¡—é“,è·¯é¢, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 2, 1, è·¯ç¯, ç…§æ˜Ž,ç¯å…‰,è·¯ç¯ä¸äº®, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 4, 1, ä¸‹æ°´é“, æŽ’æ°´,æ±¡æ°´,ä¸‹æ°´é“å µå¡ž, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 5, 1, äº•ç›–, çª¨äº•ç›–,ä¸‹æ°´é“ç›–, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 6, 2, å™ªéŸ³, å™ªå£°,åµé—¹,æ‰°æ°‘, 1, 2.5, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 7, 2, æ±¡æŸ“, ç©ºæ°”æ±¡æŸ“,çŽ¯å¢ƒæ±¡æŸ“,å¤§æ°”æ±¡æŸ“, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 8, 2, æ‰¬å°˜, ç°å°˜,ç²‰å°˜, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 9, 2, æ²¹çƒŸ, é¤é¥®æ²¹çƒŸ,æ²¹çƒŸæ‰°æ°‘, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 10, 3, ç¤¾ä¿, å…»è€ä¿é™©,åŒ»ç–—ä¿é™©,ç¤¾ä¼šä¿é™©, 1, 2.5, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 11, 3, å…¬ç§¯é‡‘, ä½æˆ¿å…¬ç§¯é‡‘,å…¬ç§¯é‡‘æå–, 1, 2.5, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 12, 3, åŒ»ä¿, åŒ»ç–—ä¿é™©,åŒ»ä¿æŠ¥é”€, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 13, 4, ç¨ŽåŠ¡, ç¨Žæ”¶,çº³ç¨Ž,å‘ç¥¨, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 14, 4, å·¥å•†, è¥ä¸šæ‰§ç…§,æ³¨å†Œç™»è®°, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 15, 5, å­¦æ ¡, æ•™è‚²,å…¥å­¦,æ‹›ç”Ÿ, 1, 2.5, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 16, 5, å­¦åŒº, å­¦åŒºæˆ¿,åˆ’ç‰‡æ‹›ç”Ÿ, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 17, 5, è¡¥è¯¾, è¡¥ä¹ ç­,åŸ¹è®­, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 19, 7, ä¿¡å·ç¯, çº¢ç»¿ç¯,äº¤é€šä¿¡å·, 1, 2.5, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 18, 7, äº¤é€š, å µè½¦,æ‹¥å µ, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 20, 7, è¿ç« , äº¤é€šè¿ç« ,è¿åœ, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==        Row: 21, 7, åœè½¦, åœè½¦ä½,åœè½¦åœº, 1, 2.0, 0, 1, null, null, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==      Total: 21
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67af833b]
+2026-04-27 18:32:41.296  INFO 37459 --- [           main] c.e.s.s.impl.ClassificationServiceImpl   : Loaded 10 categories and 21 rules
+2026-04-27 18:32:41.364  INFO 37459 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-04-27 18:32:41.443  INFO 37459 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-04-27 18:32:41.447  INFO 37459 --- [           main] c.e.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 6.152 seconds (JVM running for 6.313)
+2026-04-27 18:32:42.943  INFO 37459 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-27 18:32:42.943  INFO 37459 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-27 18:32:42.943  INFO 37459 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-27 18:32:42.967  INFO 37459 --- [nio-8080-exec-1] c.e.springdemo.controller.TicketAIApi    : æ”¶åˆ°AIå·¥å•è¯·æ±‚: content=æŸ¥è¯¢ 8
+2026-04-27 18:32:42.968  INFO 37459 --- [nio-8080-exec-1] c.e.springdemo.controller.TicketAIApi    : è¯†åˆ«æ„å›¾: ticketService.getTicketDetail
+2026-04-27 18:32:42.968  INFO 37459 --- [nio-8080-exec-1] c.e.s.service.impl.TicketServiceImpl     : æŸ¥è¯¢å·¥å•è¯¦æƒ…: orderId=8
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15a6aa45] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1903732349 wrapping com.mysql.cj.jdbc.ConnectionImpl@70fab835] will not be managed by Spring
+==>  Preparing: SELECT order_id, order_code, category_id, accept_time, accept_user, user_phone, user_region, user_address, order_content, ai_candidate_category, ai_match_evidence, status, create_time, update_time FROM biz_work_order WHERE order_id = ?
+==> Parameters: 8(Long)
+<==    Columns: order_id, order_code, category_id, accept_time, accept_user, user_phone, user_region, user_address, order_content, ai_candidate_category, ai_match_evidence, status, create_time, update_time
+<==        Row: 8, WO202401008, 0, 2026-04-27 13:58:20, å´å, 13800138008, å¤§å…´åŒº, IIè¡—é“JJè·¯, <<BLOB>>, , <<BLOB>>, 0, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15a6aa45]
+2026-04-27 18:32:45.126  INFO 37459 --- [nio-8080-exec-3] c.e.springdemo.controller.TicketAIApi    : æ”¶åˆ°AIå·¥å•è¯·æ±‚: content=æŸ¥è¯¢ 8
+2026-04-27 18:32:45.126  INFO 37459 --- [nio-8080-exec-3] c.e.springdemo.controller.TicketAIApi    : è¯†åˆ«æ„å›¾: ticketService.getTicketDetail
+2026-04-27 18:32:45.126  INFO 37459 --- [nio-8080-exec-3] c.e.s.service.impl.TicketServiceImpl     : æŸ¥è¯¢å·¥å•è¯¦æƒ…: orderId=8
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ef23729] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1345700487 wrapping com.mysql.cj.jdbc.ConnectionImpl@70fab835] will not be managed by Spring
+==>  Preparing: SELECT order_id, order_code, category_id, accept_time, accept_user, user_phone, user_region, user_address, order_content, ai_candidate_category, ai_match_evidence, status, create_time, update_time FROM biz_work_order WHERE order_id = ?
+==> Parameters: 8(Long)
+<==    Columns: order_id, order_code, category_id, accept_time, accept_user, user_phone, user_region, user_address, order_content, ai_candidate_category, ai_match_evidence, status, create_time, update_time
+<==        Row: 8, WO202401008, 0, 2026-04-27 13:58:20, å´å, 13800138008, å¤§å…´åŒº, IIè¡—é“JJè·¯, <<BLOB>>, , <<BLOB>>, 0, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ef23729]
+2026-04-27 18:33:34.393  INFO 37459 --- [nio-8080-exec-6] c.e.springdemo.controller.TicketAIApi    : æ”¶åˆ°AIå·¥å•è¯·æ±‚: content=æŸ¥è¯¢ 8
+2026-04-27 18:33:34.394  INFO 37459 --- [nio-8080-exec-6] c.e.springdemo.controller.TicketAIApi    : è¯†åˆ«æ„å›¾: ticketService.getTicketDetail
+2026-04-27 18:33:34.394  INFO 37459 --- [nio-8080-exec-6] c.e.s.service.impl.TicketServiceImpl     : æŸ¥è¯¢å·¥å•è¯¦æƒ…: orderId=8
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@23f1e538] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@758517558 wrapping com.mysql.cj.jdbc.ConnectionImpl@70fab835] will not be managed by Spring
+==>  Preparing: SELECT order_id, order_code, category_id, accept_time, accept_user, user_phone, user_region, user_address, order_content, ai_candidate_category, ai_match_evidence, status, create_time, update_time FROM biz_work_order WHERE order_id = ?
+==> Parameters: 8(Long)
+<==    Columns: order_id, order_code, category_id, accept_time, accept_user, user_phone, user_region, user_address, order_content, ai_candidate_category, ai_match_evidence, status, create_time, update_time
+<==        Row: 8, WO202401008, 0, 2026-04-27 13:58:20, å´å, 13800138008, å¤§å…´åŒº, IIè¡—é“JJè·¯, <<BLOB>>, , <<BLOB>>, 0, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@23f1e538]
+2026-04-27 18:34:05.247  INFO 37459 --- [nio-8080-exec-2] c.e.springdemo.controller.TicketAIApi    : æ”¶åˆ°AIå·¥å•è¯·æ±‚: content=æŸ¥è¯¢å·¥å•å·ï¼š2
+2026-04-27 18:34:05.248  INFO 37459 --- [nio-8080-exec-2] c.e.springdemo.controller.TicketAIApi    : è¯†åˆ«æ„å›¾: ticketService.getTicketDetail
+2026-04-27 18:34:05.248  INFO 37459 --- [nio-8080-exec-2] c.e.s.service.impl.TicketServiceImpl     : æŸ¥è¯¢å·¥å•è¯¦æƒ…: orderId=2
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58863b9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@189767032 wrapping com.mysql.cj.jdbc.ConnectionImpl@70fab835] will not be managed by Spring
+==>  Preparing: SELECT order_id, order_code, category_id, accept_time, accept_user, user_phone, user_region, user_address, order_content, ai_candidate_category, ai_match_evidence, status, create_time, update_time FROM biz_work_order WHERE order_id = ?
+==> Parameters: 2(Long)
+<==    Columns: order_id, order_code, category_id, accept_time, accept_user, user_phone, user_region, user_address, order_content, ai_candidate_category, ai_match_evidence, status, create_time, update_time
+<==        Row: 2, WO202401002, 0, 2026-04-27 13:58:20, æŽå››, 13800138002, æµ·æ·€åŒº, YYè¡—é“YYå°åŒº, <<BLOB>>, , <<BLOB>>, 0, 2026-04-27 13:58:20, 2026-04-27 13:58:20
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58863b9]
+2026-04-27 18:36:42.151  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m754ms).
+2026-04-27 18:38:22.202  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s54ms).
+2026-04-27 18:39:55.281  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s80ms).
+2026-04-27 18:40:44.059  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s778ms).
+2026-04-27 18:41:51.788  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s728ms).
+2026-04-27 19:31:05.247  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49m13s460ms).
+2026-04-27 20:16:36.814  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m31s566ms).
+2026-04-27 20:31:27.269  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m50s455ms).
+2026-04-27 20:42:30.313  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m32s974ms).
+2026-04-27 21:43:38.099  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m7s785ms).
+2026-04-27 21:50:34.637  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m56s539ms).
+2026-04-27 22:06:30.293  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s655ms).
+2026-04-27 22:09:10.955  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m10s657ms).
+2026-04-27 22:21:41.926  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m30s948ms).
+2026-04-27 22:41:11.983  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m26ms).
+2026-04-27 22:57:37.450  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s453ms).
+2026-04-27 23:01:23.823  WARN 37459 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m16s358ms).

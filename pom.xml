@@ -15,9 +15,9 @@
     <description>SpringDemo</description>
 
     <properties>
-        <java.version>17</java.version>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -45,11 +45,11 @@
             <version>8.0.33</version>
             <scope>runtime</scope>
         </dependency>
-        <!-- Lombok（JDK 17+ 兼容版本） -->
+        <!-- Lombok（最新稳定版） -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.32</version>
+            <version>1.18.46</version>
             <optional>true</optional>
         </dependency>
         <!-- JSON处理 -->
@@ -80,21 +80,21 @@
 
     <build>
         <plugins>
-            <!-- 编译插件（3.8.1+JDK8，注解处理器写死版本） -->
+            <!-- 编译插件（3.11.0+JDK8，注解处理器写死版本） -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.11.0</version>
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
+                    <source>8</source>
+                    <target>8</target>
                     <encoding>UTF-8</encoding>
-                    <!-- Lombok注解处理器：JDK 17+ 兼容版本 -->
+                    <!-- Lombok注解处理器 -->
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
-                            <version>1.18.32</version>
+                            <version>1.18.46</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>

@@ -273,11 +273,28 @@ public class ClassificationServiceImpl implements ClassificationService {
             JsonNode rootNode = objectMapper.readTree(jsonStr);
 
             if (rootNode.has("categoryId")) {
-                result.setCategoryId(rootNode.get("categoryId").asInt());
-                SysCategory category = categoryCache.get(result.getCategoryId());
-                if (category != null) {
-                    result.setCategoryName(category.getCategoryName());
-                    result.setCategoryCode(category.getCategoryCode());
+                JsonNode categoryIdNode = rootNode.get("categoryId");
+                
+                // 检查categoryId是数字还是字符串
+                if (categoryIdNode.isNumber()) {
+                    // 数字类型：直接使用
+                    result.setCategoryId(categoryIdNode.asInt());
+                    SysCategory category = categoryCache.get(result.getCategoryId());
+                    if (category != null) {
+                        result.setCategoryName(category.getCategoryName());
+                        result.setCategoryCode(category.getCategoryCode());
+                    }
+                } else if (categoryIdNode.isTextual()) {
+                    // 字符串类型：根据categoryCode查找对应的categoryId
+                    String categoryCode = categoryIdNode.asText();
+                    SysCategory category = findCategoryByCode(categoryCode);
+                    if (category != null) {
+                        result.setCategoryId(category.getCategoryId());
+                        result.setCategoryName(category.getCategoryName());
+                        result.setCategoryCode(category.getCategoryCode());
+                    } else {
+                        log.warn("未找到分类代码: {}", categoryCode);
+                    }
                 }
             }
 
@@ -295,6 +312,18 @@ public class ClassificationServiceImpl implements ClassificationService {
         }
 
         return result;
+    }
+    
+    /**
+     * 根据分类代码查找分类
+     */
+    private SysCategory findCategoryByCode(String categoryCode) {
+        for (SysCategory category : categoryCache.values()) {
+            if (categoryCode.equalsIgnoreCase(category.getCategoryCode())) {
+                return category;
+            }
+        }
+        return null;
     }
 
     private String extractJson(String text) {

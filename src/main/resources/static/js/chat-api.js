@@ -327,22 +327,6 @@ function displayClassificationPreview(data) {
     messageList.lastElementChild.innerHTML += buttonsHtml;
     scrollToBottom();
 }
-    saveCurrentMessage("ai", reply);
-    
-    // 添加确认和取消按钮
-    const buttonsHtml = `
-        <div style="margin-top: 10px; text-align: center;">
-            <button class="confirm-btn" onclick="confirmOrderClassification(${orderInfo.orderId}, ${classification.categoryId})" style="margin-right: 10px; padding: 8px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">
-                ✓ 确认分类
-            </button>
-            <button class="cancel-btn" onclick="skipClassification(${orderInfo.orderId})" style="padding: 8px 20px; background: #f44336; color: white; border: none; border-radius: 4px; cursor: pointer;">
-                ✗ 跳过分类
-            </button>
-        </div>
-    `;
-    messageList.lastElementChild.innerHTML += buttonsHtml;
-    scrollToBottom();
-}
 
 // ==================== 确认工单分类 ====================
 async function confirmOrderClassification(orderId, categoryId) {

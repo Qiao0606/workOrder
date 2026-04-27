@@ -57,7 +57,22 @@ public class TicketAIApi {
                 if (service instanceof TicketClassifier) {
                     response.put("data", ((TicketClassifier) service).classify(request));
                 } else if (service instanceof TicketService) {
-                    response.put("data", ((TicketService) service).process(request));
+                    // 从content中提取工单号
+                    Long orderId = extractOrderId(content);
+                    
+                    if (orderId == null) {
+                        response.put("status", "error");
+                        response.put("code", 400);
+                        response.put("message", "无法识别工单号，请输入正确的工单号，例如：'查询 10' 或 '工单 10'");
+                    } else {
+                        // 构建包含orderId的请求
+                        Map<String, String> serviceRequest = new HashMap<>();
+                        serviceRequest.put("orderId", String.valueOf(orderId));
+                        serviceRequest.put("content", content);
+                        
+                        // TicketService.process() 返回的是完整的response，直接使用
+                        response = ((TicketService) service).process(serviceRequest);
+                    }
                 }
             } catch (Exception e) {
                 log.error("获取服务失败: intent={}, error={}", intent, e.getMessage());
@@ -219,13 +234,28 @@ public class TicketAIApi {
         }
 
         // 工单号分类（检测数字 - 优先级高于工单内容分类）
-        // 匹配格式：分类 123、123 分类、工单123、查询123、仅数字
+        // 匹配格式：分类 123、123 分类、工单123、仅数字
         if (containsOrderId(lowerContent)) {
-            // 如果包含"分类"、"工单"、"查询"等关键词，或者只有数字
+            // 明确的分类关键词
             if (lowerContent.contains("分类") || lowerContent.contains("识别") ||
-                lowerContent.contains("归类") || lowerContent.contains("工单") ||
-                lowerContent.contains("查询") || lowerContent.matches("^\\d+$")) {
+                lowerContent.contains("归类")) {
                 return "classify_by_order_id";
+            }
+            
+            // 明确的查询关键词 - 查询工单详情
+            if (lowerContent.contains("查询") || lowerContent.contains("详情") ||
+                lowerContent.contains("查看")) {
+                return "ticketService.getTicketDetail";
+            }
+            
+            // 仅数字 - 默认为查询工单详情
+            if (lowerContent.matches("^\\d+$")) {
+                return "ticketService.getTicketDetail";
+            }
+            
+            // 包含"工单"但不包含分类关键词 - 查询详情
+            if (lowerContent.contains("工单") && !lowerContent.contains("分类")) {
+                return "ticketService.getTicketDetail";
             }
         }
 

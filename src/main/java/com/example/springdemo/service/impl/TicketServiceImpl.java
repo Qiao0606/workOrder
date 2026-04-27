@@ -52,10 +52,29 @@ public class TicketServiceImpl implements TicketService {
                 response.put("message", "工单不存在: " + orderId);
                 response.put("data", null);
             } else {
+                // 构建工单信息Map
+                Map<String, Object> orderInfo = new HashMap<>();
+                orderInfo.put("orderId", workOrder.getOrderId());
+                orderInfo.put("orderCode", workOrder.getOrderCode());
+                orderInfo.put("categoryId", workOrder.getCategoryId());
+                orderInfo.put("acceptTime", workOrder.getAcceptTime());
+                orderInfo.put("acceptUser", workOrder.getAcceptUser());
+                orderInfo.put("userPhone", workOrder.getUserPhone());
+                orderInfo.put("userRegion", workOrder.getUserRegion());
+                orderInfo.put("userAddress", workOrder.getUserAddress());
+                orderInfo.put("orderContent", workOrder.getOrderContent());
+                orderInfo.put("status", workOrder.getStatus());
+                orderInfo.put("createTime", workOrder.getCreateTime());
+                orderInfo.put("updateTime", workOrder.getUpdateTime());
+                
+                // 构建返回数据
+                Map<String, Object> data = new HashMap<>();
+                data.put("orderInfo", orderInfo);
+                
                 response.put("status", "success");
                 response.put("code", 200);
                 response.put("message", "查询成功");
-                response.put("data", workOrder);
+                response.put("data", data);
             }
 
         } catch (Exception e) {
