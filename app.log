@@ -1,0 +1,157 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.example:SpringDemo >-----------------------
+[INFO] Building SpringDemo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:2.7.18:run (default-cli) > test-compile @ SpringDemo >>>
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ SpringDemo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 9 resources
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ SpringDemo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 28 source files to D:\Learn\SpringDemo\target\classes
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ SpringDemo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory D:\Learn\SpringDemo\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ SpringDemo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to D:\Learn\SpringDemo\target\test-classes
+[INFO] 
+[INFO] <<< spring-boot:2.7.18:run (default-cli) < test-compile @ SpringDemo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:2.7.18:run (default-cli) @ SpringDemo ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2026-03-28 17:08:12.005  INFO 912 --- [           main] c.e.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_131 on 代码杀手 with PID 912 (D:\Learn\SpringDemo\target\classes started by 86131 in D:\Learn\SpringDemo)
+2026-03-28 17:08:12.009  INFO 912 --- [           main] c.e.springdemo.SpringDemoApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-28 17:08:14.319  INFO 912 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-03-28 17:08:14.333  INFO 912 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-28 17:08:14.333  INFO 912 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-03-28 17:08:14.482  INFO 912 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-28 17:08:14.487  INFO 912 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2408 ms
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Parsed mapper file: 'file [D:\Learn\SpringDemo\target\classes\mapper\BizWorkOrderMapper.xml]'
+Parsed mapper file: 'file [D:\Learn\SpringDemo\target\classes\mapper\RuleKeywordMapper.xml]'
+Parsed mapper file: 'file [D:\Learn\SpringDemo\target\classes\mapper\SysCategoryMapper.xml]'
+Parsed mapper file: 'file [D:\Learn\SpringDemo\target\classes\mapper\UserMapper.xml]'
+2026-03-28 17:08:14.932  INFO 912 --- [           main] c.e.s.s.impl.ClassificationServiceImpl   : Loading classification rules...
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35178483] was not registered for synchronization because synchronization is not active
+2026-03-28 17:08:14.952  INFO 912 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-28 17:08:14.952  WARN 912 --- [           main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2026-03-28 17:08:15.196  INFO 912 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@2011912080 wrapping com.mysql.cj.jdbc.ConnectionImpl@68e7c8c3] will not be managed by Spring
+==>  Preparing: SELECT category_id, parent_id, category_name, category_code, sort, status, remark, create_time, update_time FROM sys_category WHERE status = 1 ORDER BY sort ASC, category_id ASC
+==> Parameters: 
+<==    Columns: category_id, parent_id, category_name, category_code, sort, status, remark, create_time, update_time
+<==        Row: 1, 0, 城市管理, CSGL, 1, 1, 包含市容环境、市政设施、违建治理等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 11, 1, 市容环境, CSGL-001, 1, 1, 包含垃圾清运、共享单车、垃圾分类等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 14, 2, 大气污染, SHHJ-001, 1, 1, 包含油烟、扬尘、废气排放等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 17, 3, 社保缴费, SBJ-001, 1, 1, 包含社保基数、缴费查询、补缴等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 20, 4, 电梯安全, JGJJ-001, 1, 1, 包含电梯故障、年检、维保等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 23, 5, 义务教育, JYJ-001, 1, 1, 包含学区划分、入学报名、课业负担等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 26, 6, 消费维权, GSGL-001, 1, 1, 包含网购、实体店消费纠纷等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 29, 7, 公共交通, JTGL-001, 1, 1, 包含公交、地铁、班车等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 32, 8, 就医服务, YWJY-001, 1, 1, 包含挂号、就医流程、医疗服务等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 35, 9, 景区管理, LYJ-001, 1, 1, 包含景区收费、设施、服务等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 38, 10, 物业管理, FJGL-001, 1, 1, 包含物业收费、服务、维修等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 2, 0, 生态环境, SHHJ, 2, 1, 包含大气污染、噪音污染、水污染等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 12, 1, 违建治理, CSGL-002, 2, 1, 包含私搭乱建、违规装修等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 15, 2, 噪音污染, SHHJ-002, 2, 1, 包含施工、商业、生活噪音等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 18, 3, 养老金, SBJ-002, 2, 1, 包含养老金调整、发放、认证等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 21, 4, 供水保障, JGJJ-002, 2, 1, 包含停水、水质、水管维修等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 24, 5, 校外培训, JYJ-002, 2, 1, 包含培训机构监管、退费、虚假宣传等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 27, 6, 食品安全, GSGL-002, 2, 1, 包含餐饮、商超食品质量等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 30, 7, 道路管理, JTGL-002, 2, 1, 包含道路破损、井盖、停车等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 33, 8, 药品监管, YWJY-002, 2, 1, 包含药品质量、价格、供应等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 36, 9, 旅游维权, LYJ-002, 2, 1, 包含旅行社、导游、消费纠纷等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 39, 10, 保障性住房, FJGL-002, 2, 1, 包含公租房、经适房、廉租房等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 3, 0, 社会保障, SBJ, 3, 1, 包含社保、医保、养老金等民生保障诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 13, 1, 占道经营, CSGL-003, 3, 1, 包含商铺占道、流动摊贩等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 16, 2, 水污染, SHHJ-003, 3, 1, 包含河道、小区污水等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 19, 3, 医保报销, SBJ-003, 3, 1, 包含医保报销、异地就医、药品目录等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 22, 4, 供暖保障, JGJJ-003, 3, 1, 包含供暖温度、停暖、维修等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 25, 5, 学前教育, JYJ-003, 3, 1, 包含幼儿园收费、入园、师资等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 28, 6, 价格监管, GSGL-003, 3, 1, 包含哄抬物价、乱收费等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 31, 7, 出租车管理, JTGL-003, 3, 1, 包含拒载、乱收费、绕路等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 34, 8, 公共卫生, YWJY-003, 3, 1, 包含疫情防控、体检、疫苗等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 37, 9, 文化服务, LYJ-003, 3, 1, 包含图书馆、文化馆、演出等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 40, 10, 房屋维修, FJGL-003, 3, 1, 包含房屋漏水、墙体开裂等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 4, 0, 基础设施, JGJJ, 4, 1, 包含水、电、气、暖、电梯等基础设施诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 5, 0, 教育教学, JYJ, 5, 1, 包含学前教育、义务教育、培训监管等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 6, 0, 市场监管, GSGL, 6, 1, 包含消费维权、市场秩序、企业监管等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 7, 0, 交通运输, JTGL, 7, 1, 包含公交、出租、道路、停车等交通诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 8, 0, 医疗卫生, YWJY, 8, 1, 包含就医、药品、医保、公共卫生等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 9, 0, 文化旅游, LYJ, 9, 1, 包含景区管理、旅游维权、文化服务等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==        Row: 10, 0, 住房保障, FJGL, 10, 1, 包含公租房、物业、公积金、拆迁等诉求, 2026-03-22 15:51:27, 2026-03-22 15:51:27
+<==      Total: 40
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35178483]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79316f3a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@941453849 wrapping com.mysql.cj.jdbc.ConnectionImpl@68e7c8c3] will not be managed by Spring
+==>  Preparing: SELECT rule_id, category_id, keyword, synonym, match_type, weight, hit_count, status, effective_time, expire_time, create_time, update_time FROM rule_keyword WHERE status = 1 AND (effective_time IS NULL OR effective_time <= NOW()) AND (expire_time IS NULL OR expire_time >= NOW()) ORDER BY category_id ASC, weight DESC
+==> Parameters: 
+<==    Columns: rule_id, category_id, keyword, synonym, match_type, weight, hit_count, status, effective_time, expire_time, create_time, update_time
+<==        Row: 29, 9, 景区门票, 门票价格,捆绑消费,乱收费, 1, 4.0, 19, 1, 2026-03-01 00:00:00, 2026-05-01 00:00:00, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 26, 11, 井盖破损, 井盖坏了,井盖缺失,坠井风险, 2, 4.9, 23, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 1, 11, 垃圾清运, 垃圾清理,垃圾运输,垃圾收运, 1, 4.5, 128, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 4, 11, 垃圾桶满溢, 垃圾桶满了,垃圾堆积,垃圾桶未清理, 1, 4.2, 89, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 2, 11, 共享单车, 共享自行车,单车乱停,共享单车占道, 1, 4.0, 95, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 3, 11, 垃圾分类, 垃圾投放,厨余垃圾,可回收物, 1, 3.8, 76, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 5, 12, 私搭乱建, 违规搭建,加盖房屋,违建, 1, 4.8, 45, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 6, 12, 违规装修, 拆承重墙,私改结构,装修违建, 1, 4.3, 32, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 7, 13, 占道经营, 出店经营,店外摆摊,流动摊贩, 1, 4.0, 67, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 8, 13, 马路市场, 占道市场,路边摆摊, 1, 3.5, 28, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 9, 14, 油烟排放, 餐饮油烟,油烟扰民,油烟超标, 1, 4.6, 102, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 10, 14, 扬尘污染, 工地扬尘,渣土车扬尘,粉尘, 1, 4.1, 58, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 11, 15, 施工噪音, 夜间施工,工地噪音,装修噪音, 1, 4.7, 83, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 12, 15, 商业噪音, 酒吧噪音,广场舞噪音,商铺音响, 1, 4.2, 71, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 13, 16, 污水排放, 河道污水,小区污水,工厂排污, 1, 4.4, 29, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 14, 16, 水质浑浊, 自来水浑浊,饮用水异味, 1, 3.9, 18, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 15, 20, 电梯故障, 电梯停运,电梯困人,电梯异响, 1, 5.0, 78, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 16, 20, 电梯年检, 电梯维保,电梯检测,电梯安全, 1, 4.0, 41, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 17, 21, 停水, 停水通知,小区停水,无水可用, 1, 4.9, 96, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 18, 21, 水管漏水, 管道漏水,水表漏水,停水维修, 1, 4.3, 52, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 19, 22, 供暖不热, 室温低,暖气不热,供暖温度, 1, 4.8, 115, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 20, 22, 停暖, 暖气停供,供暖中断, 1, 4.5, 63, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 23, 25, 假货, 假冒伪劣,仿冒产品,假货维权, 1, 4.7, 65, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 22, 25, 退货难, 拒绝退货,退款难,售后无保障, 1, 4.4, 92, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 21, 25, 虚假宣传, 夸大宣传,不实宣传,误导消费, 1, 4.2, 87, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 27, 25, ^1[3-9]\d{9}$, 手机号,电话,联系方式, 3, 3.0, 15, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 24, 27, 哄抬物价, 价格虚高,乱涨价,高价售卖, 1, 4.6, 38, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==        Row: 25, 27, 乱收费, 违规收费,多收费,无依据收费, 1, 4.3, 54, 1, 2026-01-01 00:00:00, null, 2026-03-22 15:53:33, 2026-03-22 15:53:33
+<==      Total: 28
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79316f3a]
+2026-03-28 17:08:15.306  INFO 912 --- [           main] c.e.s.s.impl.ClassificationServiceImpl   : Loaded 40 categories and 28 rules
+2026-03-28 17:08:15.500  INFO 912 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-03-28 17:08:15.750  INFO 912 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-03-28 17:08:15.761  INFO 912 --- [           main] c.e.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 4.161 seconds (JVM running for 4.689)
+2026-03-28 17:16:31.011  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m13s592ms189?s200ns).
+2026-03-28 19:15:51.141  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h54m50s72ms293?s800ns).
+2026-03-28 19:30:21.887  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m566ms37?s200ns).
+2026-03-28 21:31:15.766  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m52s207ms960?s100ns).
+2026-03-28 22:00:28.254  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m42s77ms41?s600ns).
+2026-03-28 22:29:14.542  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m46s266ms353?s300ns).
+2026-03-28 23:04:11.473  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m26s663ms811?s600ns).
+2026-03-29 01:30:15.586  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m32s641ms545?s500ns).
+2026-03-29 04:50:43.927  WARN 912 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h17m28s277ms420?s600ns).

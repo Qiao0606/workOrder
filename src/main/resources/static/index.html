@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI智能对话助手</title>
+  <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+<div class="app-container">
+  <div class="sidebar">
+    <button class="new-chat-btn">+ 新建会话</button>
+    <div class="chat-list" id="chatList">
+      <div class="chat-item active" data-chat-id="default">
+        <span class="chat-title">默认会话</span>
+        <span class="delete-chat">×</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <h1 id="currentChatTitle">默认会话</h1>
+      <div class="quick-actions">
+        <button class="quick-btn" data-action="1">📝 工单内容分类</button>
+        <button class="quick-btn" data-action="2">🔍 工单号查询</button>
+        <button class="quick-btn" data-action="3">📊 查看统计</button>
+        <button class="quick-btn" data-action="4">📋 示例工单</button>
+        <button class="quick-btn" data-action="loadUnclassified">📋 查看未分类工单</button>
+        <button class="quick-btn quick-btn-special" data-action="goToClassification">🎯 分类管理</button>
+      </div>
+    </div>
+
+    <div class="message-list" id="messageList">
+      <div class="empty-tip">开始和AI对话吧～</div>
+    </div>
+
+    <div class="input-area">
+      <textarea id="messageInput" placeholder="请输入您的问题..." maxlength="500"></textarea>
+      <button id="sendBtn">➤</button>
+    </div>
+  </div>
+</div>
+
+<script src="./js/chat-api.js"></script>
+</body>
+</html>

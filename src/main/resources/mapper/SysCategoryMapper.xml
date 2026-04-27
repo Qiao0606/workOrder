@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springdemo.mapper.SysCategoryMapper">
+
+    <resultMap id="SysCategoryResultMap" type="com.example.springdemo.model.SysCategory">
+        <id column="category_id" property="categoryId"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="category_name" property="categoryName"/>
+        <result column="category_code" property="categoryCode"/>
+        <result column="sort" property="sort"/>
+        <result column="status" property="status"/>
+        <result column="remark" property="remark"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="SysCategoryResultMap">
+        SELECT category_id, parent_id, category_name, category_code,
+               sort, status, remark, create_time, update_time
+        FROM sys_category
+        WHERE status = 1
+        ORDER BY sort ASC, category_id ASC
+    </select>
+
+    <select id="selectById" parameterType="Integer" resultMap="SysCategoryResultMap">
+        SELECT category_id, parent_id, category_name, category_code,
+               sort, status, remark, create_time, update_time
+        FROM sys_category
+        WHERE category_id = #{categoryId}
+          AND status = 1
+    </select>
+
+    <select id="countAll" resultType="int">
+        SELECT COUNT(*) FROM sys_category WHERE status = 1
+    </select>
+
+</mapper>

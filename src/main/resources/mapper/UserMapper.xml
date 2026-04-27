@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须和Mapper接口的全类名一致 -->
+<mapper namespace="com.example.springdemo.mapper.UserMapper">
+<!-- 结果映射（可选，驼峰转换开启后可省略） -->
+<resultMap id="UserResultMap" type="com.example.springdemo.model.User">
+    <id column="id" property="id"/>
+    <result column="user_name" property="name"/>
+    <result column="user_password" property="password"/>
+    <result column="user_phone" property="phone"/>
+</resultMap>
+
+<!-- 根据ID查询用户（对应Mapper接口的getUserById方法） -->
+<select id="getUserById" parameterType="Long" resultMap="UserResultMap">
+    SELECT id, user_name, user_password, user_phone FROM yonghu WHERE id = #{id}
+</select>
+
+<!-- 查询所有用户 -->
+<select id="listAllUsers" resultMap="UserResultMap">
+    SELECT id, user_name, user_password, user_phone FROM yonghu
+</select>
+
+<!-- 新增用户 -->
+<insert id="addUser" parameterType="com.example.springdemo.model.User" useGeneratedKeys="true" keyProperty="id">
+    INSERT INTO user (user_name, user_password, user_phone) VALUES (#{name}, #{password}, #{phone})
+</insert>
+
+<!-- 修改用户 -->
+<update id="updateUser" parameterType="com.example.springdemo.model.User">
+    UPDATE yonghu SET user_name = #{name}, user_password = #{password}, user_phone = #{phone} WHERE id = #{id}
+</update>
+
+<!-- 删除用户 -->
+<delete id="deleteUser" parameterType="Long">
+    DELETE FROM yonghu WHERE id = #{id}
+</delete>
+</mapper>

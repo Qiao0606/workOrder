@@ -1,0 +1,530 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    display: block; /* 改为 block，不居中 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 整体容器 */
+.app-container {
+    display: flex;
+    width: 100%;     /* 恢复满屏 */
+    height: 100vh;   /* 恢复满屏 */
+    margin: 0;
+    padding: 0;
+    border-radius: 0; /* 取消圆角 */
+    box-shadow: none; /* 取消阴影 */
+    overflow: hidden;
+}
+/* 左侧会话列表 */
+.sidebar {
+    width: 260px;
+    background-color: #2e3440;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.new-chat-btn {
+    background-color: #4096ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.2s;
+}
+
+.new-chat-btn:hover {
+    background-color: #3385ff;
+}
+
+.chat-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat-item {
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    background-color: #3b4252;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.chat-item:hover {
+    background-color: #434c5e;
+}
+
+.chat-item.active {
+    background-color: #4096ff;
+}
+
+.chat-title {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.delete-chat {
+    font-size: 16px;
+    color: #d8dee9;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: none;
+}
+
+.chat-item:hover .delete-chat {
+    display: block;
+}
+
+.delete-chat:hover {
+    background-color: #5c677d;
+    color: #ffffff;
+}
+
+/* 右侧对话容器 */
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+}
+
+.chat-header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e9f0;
+}
+
+.chat-header h1 {
+    color: #2e3440;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* 快捷按钮样式 */
+.quick-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.quick-btn {
+    background-color: #f0f7ff;
+    color: #4096ff;
+    border: 1px solid #c6e2ff;
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quick-btn:hover {
+    background-color: #4096ff;
+    color: #ffffff;
+    border-color: #4096ff;
+}
+
+.quick-btn-special {
+    background-color: #e6fff0;
+    color: #52c41a;
+    border-color: #b7eb8f;
+}
+
+.quick-btn-special:hover {
+    background-color: #52c41a;
+    color: #ffffff;
+    border-color: #52c41a;
+}
+
+/* 消息列表 */
+.message-list {
+    height: calc(100vh - 240px);
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 滚动条美化 */
+.message-list::-webkit-scrollbar,
+.chat-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.message-list::-webkit-scrollbar-thumb,
+.chat-list::-webkit-scrollbar-thumb {
+    background-color: #d8e0ec;
+    border-radius: 3px;
+}
+
+/* Form elements - 只在 classification.html 中使用 */
+.classification-page .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.classification-page .form-group input,
+.classification-page .form-group select,
+.classification-page .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.classification-page .form-group input:focus,
+.classification-page .form-group select:focus,
+.classification-page .form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.status-confirmed {
+    color: #52c41a;
+    font-weight: 600;
+}
+
+.user-message {
+    flex-direction: row-reverse;
+    margin-left: auto;
+}
+
+.ai-message {
+    flex-direction: row;
+}
+
+.message-content {
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.user-message .message-content {
+    background-color: #4096ff;
+    color: #ffffff;
+}
+
+.ai-message .message-content {
+    background-color: #e5e9f0;
+    color: #2e3440;
+}
+
+/* 加载状态 */
+.loading {
+    display: flex;
+    align-items: center;
+    color: #909399;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.loading-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #909399;
+    margin: 0 2px;
+    animation: loading 1.4s infinite ease-in-out both;
+}
+
+.loading-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loading {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* 输入区域 */
+.input-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#messageInput {
+    flex: 1;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #e5e9f0;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    resize: none;
+    line-height: 50px;
+}
+
+#messageInput:focus {
+    border-color: #4096ff;
+}
+
+#sendBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4096ff;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+#sendBtn:hover {
+    background-color: #3385ff;
+}
+
+#sendBtn:disabled {
+    background-color: #909399;
+    cursor: not-allowed;
+}
+
+/* 空状态提示 */
+.empty-tip {
+    text-align: center;
+    color: #909399;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+    .chat-title, .delete-chat {
+        display: none !important;
+    }
+    .chat-container {
+        max-width: calc(100% - 80px);
+    }
+    .quick-actions {
+        gap: 5px;
+    }
+    .quick-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+/* ========== 分类结果样式 ========== */
+.classification-result {
+    min-width: 280px;
+    padding: 15px;
+    background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+    border-radius: 12px;
+    border: 1px solid #d4e8fc;
+}
+
+.classification-result.confirmed {
+    background: linear-gradient(135deg, #f0fff4 0%, #e6ffed 100%);
+    border-color: #b7eb8f;
+}
+
+.classification-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1677ff;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d4e8fc;
+}
+
+.classification-result.confirmed .classification-title {
+    color: #52c41a;
+    border-bottom-color: #b7eb8f;
+}
+
+.classification-info {
+    margin-bottom: 12px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.info-row .label {
+    color: #666;
+}
+
+.info-row .value {
+    color: #333;
+    font-weight: 500;
+    text-align: right;
+    max-width: 60%;
+    word-break: break-all;
+}
+
+.info-row .value.status-confirmed {
+    color: #52c41a;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed #d4e8fc;
+}
+
+.confirm-btn {
+    flex: 1;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.confirm-btn:hover {
+    background: linear-gradient(135deg, #73d13d 0%, #95de64 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(82, 196, 26, 0.3);
+}
+
+.cancel-btn {
+    flex: 1;
+    padding: 8px 16px;
+    background: #fff;
+    color: #666;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cancel-btn:hover {
+    background: #f5f5f5;
+    border-color: #bbb;
+}
+
+.saved-badge {
+    text-align: center;
+    padding: 8px;
+    background: rgba(82, 196, 26, 0.1);
+    border-radius: 6px;
+    font-size: 12px;
+    color: #52c41a;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.saved-badge.success {
+    background: linear-gradient(135deg, #d9f7be 0%, #b7eb8f 100%);
+}
+
+.status-skipped {
+    color: #9254de;
+    font-weight: 600;
+}
+
+.status-pending {
+    color: #1890ff;
+    font-weight: 600;
+}
+
+/* 修复消息气泡布局 - 只补缺失的样式 */
+.message-item {
+    display: flex;
+    margin-bottom: 16px;
+    gap: 10px;
+}
+
+/* 用户消息靠右 */
+.user-message {
+    flex-direction: row-reverse;
+    margin-left: auto;
+    max-width: 75%;
+}
+
+/* AI消息靠左 */
+.ai-message {
+    max-width: 75%;
+}
+
+/* 消息气泡内容 */
+.message-content {
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.5;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.user-message .message-content {
+    background-color: #4096ff;
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+}
+
+.ai-message .message-content {
+    background-color: #e5e9f0;
+    color: #2e3440;
+    border-bottom-left-radius: 4px;
+}
+/* 修复会话列表删除按钮显示 */
+.delete-chat {
+    font-size: 16px !important;
+    color: #d8dee9 !important;
+    cursor: pointer !important;
+    padding: 2px 6px !important;
+    border-radius: 3px !important;
+    display: none !important;
+}
+.chat-item:hover .delete-chat {
+    display: block !important;
+}
